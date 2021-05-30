@@ -1,0 +1,27 @@
+{{#if config.header.enabled}}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dashy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    {{#each config.header.menuItems as | item |}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{item.link}}">{{item.text}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+                {{#if config.header.enableSearch}}
+                    <form class="d-flex" action="{{config.header.searchEngine}}" type="get">
+                        <input class="form-control me-sm-2" type="text" name="{{config.header.searchParam}}" placeholder="Search" id="searchEngine">
+                    </form>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+
+{{/if}}
