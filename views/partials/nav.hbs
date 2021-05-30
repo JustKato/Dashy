@@ -11,7 +11,12 @@
                 <ul class="navbar-nav me-auto">
                     {{#each config.header.menuItems as | item |}}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{item.link}}">{{item.text}}</a>
+                            <a class="nav-link" href="{{item.link}}">
+                                {{#if item.icon}}
+                                    <i style="margin-right: .25rem" class="{{item.icon}}"></i>
+                                {{/if}}
+                                {{item.text}}
+                            </a>
                         </li>
                     {{/each}}
                 </ul>

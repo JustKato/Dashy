@@ -29,25 +29,24 @@ export = {
         menuItems: [
             {
                 // The Font Awesome 5 icon of the entry
-                icon: ``,
+                icon: `fas fa-home`,
                 // The text to display of the item
                 text: `Home`,
                 // The link can also be javascript:
                 link: `/`
             },
             {
-                icon: ``,
+                icon: `fas fa-info`,
                 text: `About`,
                 link: `https://justkato.me/work`
             },
+            {
+                icon: false,
+                text: `Dummy`,
+                link: `javascript:alert('Hey There')`
+            },
         ],
     },
-
-    // Widgets to enable in the widgets menu on the top side of the dashboard
-    widget: [
-        availableWidgets.coinWatch(`ETH`, `EUR`),
-        availableWidgets.coinWatch(`BTC`, `EUR`),
-    ],
 
     // The cards to display in the body of the 
     items: [
@@ -62,6 +61,12 @@ export = {
             // Keep the text even after quiting the tab
             persistent: true,
         }
-    ]
+    ],
+
+    // Widgets to enable in the widgets menu on the top side of the dashboard
+    widget: [
+        availableWidgets.coinWatch(`ETH`, `EUR`),
+        availableWidgets.coinWatch(`BTC`, `EUR`),
+    ],
 
 }
