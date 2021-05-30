@@ -28,7 +28,7 @@ export = {
         // Menu items
         menuItems: [
             {
-                // The bootstrap 5 icon of the entry
+                // The Font Awesome 5 icon of the entry
                 icon: ``,
                 // The text to display of the item
                 text: `Home`,
