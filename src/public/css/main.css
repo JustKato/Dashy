@@ -6,4 +6,59 @@ body, html {
 #main-container {
     min-height: 10rem;
     max-width: 1300px;
+
+    padding: 1rem;
+}
+
+a, a:visited, a:active, a:hover {
+    font-style: inherit !important;
+    font-size: inherit !important;
+    color: inherit !important;
+    text-decoration:  inherit !important;
+}
+
+.card {
+    margin: .5rem;
+    padding: 0 !important;
+
+    width:  20rem !important;
+    height: 5rem !important;
+
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-flow: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.card .card-title {
+    font-size: 1rem;
+}
+
+.card .card-subtitle {
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+.card .card-textholder {
+    display: flex;
+    flex-flow: column;
+}
+
+.card .card-icon {
+    display: block;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width:  1.5rem;
+    height: 1.5rem;
+
+     /* Don't ask */
+    margin-left: 1.5rem;
 }

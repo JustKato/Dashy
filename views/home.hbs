@@ -1,3 +1,31 @@
+
+<div class="col-12">
+
+    {{#each config.items as | rowItems |}}
+        <div class="row">
+            {{#each rowItems as | item |}}
+                <a href="{{item.link}}" class="card border-dark">
+                    {{#if item.header}}
+                        <div class="card-header">{{item.header}}</div>
+                    {{/if}}
+                    <div class="card-body row">
+                        
+                        <div class="card-icon" style="background-image: url('{{item.icon}}')"></div>
+                    
+                        <div class="card-textholder">
+                            <span class="card-title"   >{{item.title}}</span>
+                            <span class="card-subtitle">{{item.subtitle}}</span>
+                        </div>
+                    </div>
+                </a>
+            {{/each}}
+        </div>
+    {{/each}}
+
+</div>
+
+
+
 {{#if config.header.searchEngineFocus}}
     <script>
         // Focus the search

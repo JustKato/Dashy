@@ -50,17 +50,42 @@ export = {
 
     // The cards to display in the body of the 
     items: [
-        {
-            // The type of item to display
-            type: itemTypes.NOTE,
-            
-            // If the text should be editable
-            readOnly: false,
-            // The default text to display if nothing is locally stored
-            text: ``,
-            // Keep the text even after quiting the tab
-            persistent: true,
-        }
+        // The second level represents a row
+        [
+            {
+                // The type of item to display
+                type: itemTypes.LINK,
+                
+                icon:     `/public/img/logo.svg`,
+                title:    `Example Link`,
+                subtitle: `This is just a simple example for a link`,
+                link:     `/`,
+            },
+            {
+                // The type of item to display
+                type: itemTypes.NOTE,
+    
+                // All items can have headers, but you can always set them to false to disable
+                header: `My Note`,            
+                // If the text should be editable
+                readOnly: false,
+                // The default text to display if nothing is locally stored
+                text: ``,
+                // Keep the text even after quiting the tab
+                persistent: true,
+            },
+        ],
+        [
+            {
+                // The type of item to display
+                type: itemTypes.LINK,
+                
+                icon:     `/public/img/logo.svg`,
+                title:    `Second Example`,
+                subtitle: `This is just a simple example for a link`,
+                link:     `/`,
+            },
+        ]
     ],
 
     // Widgets to enable in the widgets menu on the top side of the dashboard
